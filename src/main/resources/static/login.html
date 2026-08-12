@@ -245,6 +245,7 @@
     </div>
 </div>
 
+const API_BASE_URL = "";
 <script>
     // Point this at wherever your Spring Boot backend is running.
     const API_BASE_URL = "http://localhost:8080";
@@ -263,6 +264,7 @@
 
         const username = document.getElementById("username").value.trim();
         const password = document.getElementById("password").value;
+        const errorMsg = document.getElementById('errorMsg');
 
         if (!username || !password) {
             showStatus("Please enter both username and password.", "error");
