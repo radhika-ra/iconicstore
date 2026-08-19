@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/iconicstore
+    username: postgres
+    password: radhika
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+logging:
+  level:
+    org.springframework.security: TRACE
+# Generate a real random secret, e.g.: openssl rand -base64 32
+# Never commit the real value to Git — use an environment variable in practice:
+# jwt.secret: ${JWT_SECRET}
+jwt:
+  secret: x2AuI5o2fPq6khC7f+E0ChwGecrD3QWRIDeX9APnlBg=
+  expiration-ms: 86400000  # 24 hours
